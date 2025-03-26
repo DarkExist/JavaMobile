@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Верхняя панель с кнопками -->
+    <LinearLayout
+        android:id="@+id/top_panel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/backArrowImage"
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:layout_weight="0"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/arrow_left_100_100" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <ImageButton
+            android:id="@+id/bookmarkImage"
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:layout_weight="0"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/bookmark_empty_76_100" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_panel"
+        android:layout_above="@id/bottom_panel" />
+    <!-- Нижняя панель с названием и автором -->
+    <LinearLayout
+        android:id="@+id/bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:gravity="center"
+
+        android:padding="0dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#F5C074" />
+        <TextView
+            android:id="@+id/bookTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Название книги"
+            android:textColor="#000000"
+            android:textSize="64px" />
+
+        <TextView
+            android:id="@+id/bookAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Автор книги"
+            android:textColor="#888888"
+            android:textSize="36px" />
+    </LinearLayout>
+
+
+</RelativeLayout>
